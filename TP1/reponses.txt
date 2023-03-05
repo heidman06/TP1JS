@@ -1,0 +1,59 @@
+
+➢Quel sera l’évènement qui déclenchera l’appelle de votre fonction ?
+
+Ca sera le onload() ;
+
+➢Quelle méthode avez-vous utilisée pour récupérer l’objet représentant votre balise <h1> ?
+
+document.getElementById (Ici je place l'id (title)
+
+➢Quelle propriété de l’objet représentant votre balise <h1> avez-vous utilisée pour récupérer
+le texte de celui-ci ?
+
+h1.innerHTML
+
+➢Quelle(s) méthode(s) avez-vous utilisée pour récupérer l’objet représentant la première
+balise <h2> ?
+
+document.getElementsByTagName("h2");
+h2[0];
+
+➢Comment faire pour connaitre le nombre de balise <h2> du document ?
+
+console.log(h2.length);
+
+➢Quelle méthode avez-vous utilisée pour récupérer les objets de votre classe ?
+
+document.querySelectorAll('.firstOrLast');
+
+➢Comment avez-vous déterminé si un nombre est pair ?
+
+(elements.length % 2 === 0) cela le verifie grace au modulo
+
+➢ Quelles différences existe-t-il entre les 3 propriétés innerHTML, innerText et textContent ?
+
+InnerText et textContent sont similaires, mais innerText tient compte de la mise en forme tandis que textContent ne le fait pas.
+innerHTML est différent car il permet de travailler avec le code HTML.
+
+➢Comment modifier votre code pour qu’il permette de sélectionner le 1er auteur de la liste ?
+
+	let nomArray = document.getElementsByTagName("meta");
+	let nom = nomArray[1].content;
+
+➢Même question avec le dernier auteur de la liste.
+
+    let nomArray = document.getElementsByTagName("meta");
+	let nom = nomArray[nomArray.length-1].content;
+
+➢Comment obtenez-vous le nombre de jours ?
+Je prends la difference en MS de la date crée et la date actuelle , ensuite j'effectue le calcul suivant pour l'avoir
+en jour tout en arrondissant grace a Math.ceil :
+Math.ceil(calculDiff / (1000 * 60 * 60 * 24);
+
+➢Comment faites-vous la mise à jour du texte ?
+document.getElementById("paragh").innerHTML = `Il reste ${calculDiffJours} jour${remplacement} avant le 19 juillet ${annee}.`;
+En remplacant chaque element du p par la variable equivalente.
+
+
+➢Laquelle des deux méthodes de l’objet window avez-vous utilisé ? Pourquoi ?
+J'ai choisi windows.setInterval au lieu de setTimeOut car ce dernier doit appeler manuellement la fonction à chaque fois que l'on souhaite la mettre à jour.

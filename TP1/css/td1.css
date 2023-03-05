@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.firstOrLast{
+    color: aqua;
+    font-family: "Cantarell Extra Bold", serif;
+}
+#paragh{
+    cursor: pointer;
+}
+
+#graphic-clock{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+img{
+    width: 20px;
+}
+.separator{
+    display: inline;
+
+}
